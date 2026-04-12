@@ -23,7 +23,19 @@ It allows users to connect their wallet, view XLM balance, and send transactions
 4. Open http://localhost:3000  
 
 ## Screenshots
-(Add screenshots here)
+## 🚀 Project: Stellar Connect Wallet
+
+A simple Stellar dApp using Freighter wallet.
+
+---
+
+## 📸 UI Screenshot
+![UI](./ui.png)
+
+---
+
+## 💸 Transaction Screenshot
+![Transaction](./transaction.png)
 
 ## Status
 Completed for Stellar White Belt Level 1
