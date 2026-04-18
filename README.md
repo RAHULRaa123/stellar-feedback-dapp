@@ -33,64 +33,54 @@ This project demonstrates full-stack Web3 development including frontend, smart 
 - Fetch Feedback from Blockchain  
 - Transaction Tracking  
 
-### Level 3 (New Added)
+### Level 3
 - Loading states (UI feedback)  
 - Error handling  
 - Fully deployed app (Vercel)  
 - Clean UI  
 
+### 🟢 Level 4 (Advanced Features)
+- Inter-contract call (Caller → Feedback Contract)  
+- On-chain data interaction between contracts  
+- Production-ready deployment  
+- Improved contract architecture  
+
 ---
 
-## 🧠 Smart Contract  
+## 🧠 Smart Contracts  
 
+### Main Feedback Contract  
 **Contract Address:**  
-CBGOBZLELYYHDOWYV7ZHHF4BP2DTPGYFRGAQDGJQZKCBNIXLLXD7UAQB  
+CBXTSVTRCTXSJYYTGGV6G5R3F4EI73B3QW3SZ2MAZXMFEW445VQW7MOJ  
 
-### Functions
+**Functions**
 - `send_feedback`  
-- `get_feedback`  
+- `fetch_feedback`  
 
 ---
 
-## 🔁 Transaction Proof  
+### Caller Contract (Inter-Contract)  
+**Contract Address:**  
+CCBBSW5CDBODQJIANEZE7T56OP6PSCGDRSRUJXO6DYDV27KRF3OQAULE  
 
-**Transaction Hash:**  
-22491da5eaaee153369c07dde0d78a416adaf795493cf434321a45bc7a81baef  
+**Function**
+- `call_hello` → calls `send_feedback` in main contract  
+
+---
+
+## 🔗 Level 4 - Inter-Contract Call Proof  
+
+### Transaction Hash  
+3f98cddda6720672d1472f6a1a9934a9601a55fc000184fcd1dd6b8c4f51b121  
 
 🔗 Explorer:  
-https://stellar.expert/explorer/testnet/tx/22491da5eaaee153369c07dde0d78a416adaf795493cf434321a45bc7a81baef  
+https://stellar.expert/explorer/testnet/tx/3f98cddda6720672d1472f6a1a9934a9601a55fc000184fcd1dd6b8c4f51b121  
 
 ---
 
-## 🧪 Tests  
+## ✅ Result  
 
-✔ 3 Smart Contract Tests Successfully Passed  
-
-👉 Test Screenshot:  
-![Tests](./rust-test.png)
-
----
-
-## 🎥 Demo Video  
-
-A short demo showing wallet connection, sending XLM, and smart contract interaction:
-
-🔗 https://youtu.be/5wjd01jvn_A  
-
----
-
-## 🧩 Tech Stack  
-- React.js  
-- Stellar SDK  
-- Freighter Wallet  
-- Soroban Smart Contracts (Rust)  
-
----
-
-## ⚙️ Setup  
+Successfully executed inter-contract call:
 
 ```bash
-git clone https://github.com/RAHULRaa123/stellar-connect-wallet.git
-cd stellar-connect-wallet
-npm install
-npm start
+"Hello from caller"
