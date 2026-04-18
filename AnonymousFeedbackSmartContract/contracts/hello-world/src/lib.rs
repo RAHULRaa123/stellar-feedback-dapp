@@ -1,20 +1,6 @@
 #![no_std]
 
-use soroban_sdk::{contract, contracttype, contractimpl, Env, String, Symbol, symbol_short};
-
-const COUNT_FB: Symbol = symbol_short!("COUNT_FB");
-
-#[contracttype]
-pub enum FBbook {
-    Feedback(u64)
-}
-
-#[contracttype]
-#[derive(Clone, Debug)]
-pub struct Feedback {
-    fb_id: u64,
-    message: String,
-}
+use soroban_sdk::{contract, contractimpl, Env, symbol_short, Map, String};
 
 #[contract]
 pub struct Anonymousfeedback;
@@ -22,30 +8,25 @@ pub struct Anonymousfeedback;
 #[contractimpl]
 impl Anonymousfeedback {
 
-    pub fn send_feedback(env: Env, feedback_msg: String) -> u64 {
+    pub fn send_feedback(env: Env, message: String) -> u32 {
+        let mut count: u32 = env.storage().instance().get(&symbol_short!("COUNT")).unwrap_or(0);
+        count += 1;
 
-        let mut fb_count: u64 = env.storage().instance().get(&COUNT_FB).unwrap_or(0);
-        fb_count += 1;
+        let mut feedbacks: Map<u32, String> = env.storage().instance().get(&symbol_short!("FEEDBACK")).unwrap_or(Map::new(&env));
 
-        let mut fb_details = Self::fetch_feedback(env.clone(), fb_count.clone());
+        feedbacks.set(count, message);
+        env.storage().instance().set(&symbol_short!("FEEDBACK"), &feedbacks);
+        env.storage().instance().set(&symbol_short!("COUNT"), &count);
 
-        fb_details.fb_id = fb_count;
-        fb_details.message = feedback_msg;
-
-        env.storage().instance().set(&FBbook::Feedback(fb_details.fb_id.clone()), &fb_details);
-        env.storage().instance().set(&COUNT_FB, &fb_details.fb_id.clone());
-        env.storage().instance().extend_ttl(5000, 5000);
-
-        return fb_details.fb_id;
+        count
     }
 
-    pub fn fetch_feedback(env: Env, fb_id: u64) -> Feedback {
+    pub fn fetch_feedback(env: Env, id: u32) -> String {
+        let feedbacks: Map<u32, String> = env.storage().instance().get(&symbol_short!("FEEDBACK")).unwrap();
 
-        let key = FBbook::Feedback(fb_id.clone());
-
-        env.storage().instance().get(&key).unwrap_or(Feedback {
-            fb_id: 0,
-            message: String::from_str(&env, "Invalid feedback ID!")
-        })
+        feedbacks.get(id).unwrap()
     }
 }
+
+#[cfg(test)]
+mod test;
