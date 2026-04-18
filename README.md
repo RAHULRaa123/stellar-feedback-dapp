@@ -11,10 +11,10 @@ This is a complete **end-to-end Stellar Mini dApp** built on the **Stellar Testn
 The application allows users to:
 - Connect their wallet  
 - Send XLM transactions  
-- Interact with a deployed smart contract  
+- Interact with deployed smart contracts  
 - Store and fetch anonymous feedback on-chain  
 
-This project demonstrates full-stack Web3 development including frontend, smart contract, testing, and deployment.
+This project demonstrates full-stack Web3 development including frontend, smart contract, testing, deployment, and advanced contract interactions.
 
 ---
 
@@ -41,15 +41,15 @@ This project demonstrates full-stack Web3 development including frontend, smart 
 
 ### 🟢 Level 4 (Advanced Features)
 - Inter-contract call (Caller → Feedback Contract)  
-- On-chain data interaction between contracts  
-- Production-ready deployment  
-- Improved contract architecture  
+- Custom Token Contract (Mint + Balance)  
+- On-chain interaction between multiple contracts  
+- Production-ready contract structure  
 
 ---
 
 ## 🧠 Smart Contracts  
 
-### Main Feedback Contract  
+### 📌 Feedback Contract  
 **Contract Address:**  
 CBXTSVTRCTXSJYYTGGV6G5R3F4EI73B3QW3SZ2MAZXMFEW445VQW7MOJ  
 
@@ -59,28 +59,50 @@ CBXTSVTRCTXSJYYTGGV6G5R3F4EI73B3QW3SZ2MAZXMFEW445VQW7MOJ
 
 ---
 
-### Caller Contract (Inter-Contract)  
+### 📌 Token Contract  
 **Contract Address:**  
-CCBBSW5CDBODQJIANEZE7T56OP6PSCGDRSRUJXO6DYDV27KRF3OQAULE  
+CCUNRZQPLTIPELMXVCIMDLZP3B4RLXJCGB3NPWHDUNFJNVATKAGIRPAJ  
 
-**Function**
-- `call_hello` → calls `send_feedback` in main contract  
+**Functions**
+- `mint`  
+- `balance`  
 
 ---
 
-## 🔗 Level 4 - Inter-Contract Call Proof  
+### 📌 Caller Contract (Inter-Contract)  
+**Contract Address:**  
+CCRR3NARGJ6UYRKW7N42KVN6KL6VXEHXA7AHYMB7URS7T7FIE35XCLJC  
 
-### Transaction Hash  
-3f98cddda6720672d1472f6a1a9934a9601a55fc000184fcd1dd6b8c4f51b121  
+**Function**
+- `send_feedback_and_reward`  
+  → Calls `send_feedback` in Feedback Contract  
+
+---
+
+## 🔗 Level 4 Transaction Proof  
+
+**Transaction Hash:**  
+f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c  
 
 🔗 Explorer:  
-https://stellar.expert/explorer/testnet/tx/3f98cddda6720672d1472f6a1a9934a9601a55fc000184fcd1dd6b8c4f51b121  
+https://stellar.expert/explorer/testnet/tx/f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c  
+
+---
+
+## 📸 Level 4 Proof  
+
+### ✅ Inter-contract call success  
+![Inter Contract](./inter-contract-success.png)
+
+### ✅ Fetch feedback from blockchain  
+![Fetch Feedback](./fetch-feedback.png)
 
 ---
 
 ## ✅ Result  
 
-Successfully executed inter-contract call:
+Successfully executed inter-contract call and stored data on-chain:
 
 ```bash
-"Hello from caller"
+2
+"FINAL SUCCESS"
