@@ -1,25 +1,25 @@
 import React, { useState } from "react";
-import { connectWallet, getBalance } from "./Freighter";
+import { checkConnection, retrievePublicKey, getBalance } from "./Freighter";
 
 const Header = ({ setPubKey }) => {
   const [connected, setConnected] = useState(false);
   const [publicKey, setPublicKey] = useState("");
   const [balance, setBalance] = useState("0");
 
-  const handleConnect = async () => {
+  const connectWallet = async () => {
     try {
-      // 🔥 Direct connect (no checkConnection)
-      const key = await connectWallet();
+      const allowed = await checkConnection();
 
-      if (!key) {
-        alert("Connection failed");
+      if (!allowed) {
+        alert("Permission denied");
         return;
       }
 
-    const bal = await getBalance(key);
+      const key = await retrievePublicKey();
+      const bal = await getBalance();
 
       setPublicKey(key);
-      setPubKey(key);
+      setPubKey(key); // 🔥 MOST IMPORTANT
       setBalance(Number(bal).toFixed(2));
       setConnected(true);
 
@@ -42,7 +42,7 @@ const Header = ({ setPubKey }) => {
         </>
       )}
 
-      <button onClick={handleConnect}>
+      <button onClick={connectWallet}>
         {connected ? "Connected" : "Connect Wallet"}
       </button>
     </div>
