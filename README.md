@@ -79,6 +79,16 @@ CCRR3NARGJ6UYRKW7N42KVN6KL6VXEHXA7AHYMB7URS7T7FIE35XCLJC
 
 ---
 
+## 🔄 Inter-Contract Interaction  
+
+The Caller Contract interacts with the Feedback Contract by invoking the `send_feedback` function.  
+
+It also integrates with the Token Contract to reward users after submitting feedback.  
+
+This demonstrates cross-contract communication on Stellar Soroban.
+
+---
+
 ## 🔗 Level 4 Transaction Proof  
 
 **Transaction Hash:**  
