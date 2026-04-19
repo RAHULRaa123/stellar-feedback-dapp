@@ -1,73 +1,52 @@
+import { isConnected, requestAccess, getPublicKey } from "@stellar/freighter-api";
 import { StellarWalletsKit } from "@creit.tech/stellar-wallets-kit";
-import * as StellarSdk from "@stellar/stellar-sdk";
+import { Horizon } from "stellar-sdk";
 
+// 🔥 Mobile Wallet Kit
 const kit = new StellarWalletsKit({
-  network: "TESTNET",
+  network: "TESTNET"
 });
 
-const server = new StellarSdk.Horizon.Server(
-  "https://horizon-testnet.stellar.org"
-);
-
-// 🔹 Connect Wallet
+// 🔥 CONNECT (AUTO detect)
 export const connectWallet = async () => {
   try {
+    // 🧠 1. Try Freighter (desktop)
+    const connected = await isConnected();
+
+    if (connected) {
+      const access = await requestAccess();
+
+      if (access.error) {
+        console.log("Freighter denied");
+      } else {
+        const key = await getPublicKey();
+        return key;
+      }
+    }
+
+    // 📱 2. Fallback → Mobile Wallet Kit
     const { address } = await kit.openModal();
     return address;
+
   } catch (err) {
-    console.log("Connect error:", err);
+    console.error("Connect error:", err);
     return null;
   }
 };
 
-// 🔹 Retrieve Public Key
-export const retrievePublicKey = async () => {
+// 🔥 BALANCE
+export const getBalance = async (address) => {
   try {
-    const { address } = await kit.openModal();
-    return address;
-  } catch (err) {
-    console.log("Public key error:", err);
-    return null;
-  }
-};
-
-// 🔹 Check Connection
-export const checkConnection = async () => {
-  try {
-    const { address } = await kit.openModal();
-    return address ? true : false;
-  } catch (err) {
-    return false;
-  }
-};
-
-// 🔹 Get Balance (NEW FIX)
-export const getBalance = async () => {
-  try {
-    const { address } = await kit.openModal();
-
+    const server = new Horizon.Server("https://horizon-testnet.stellar.org");
     const account = await server.loadAccount(address);
 
-    const nativeBalance = account.balances.find(
-      (bal) => bal.asset_type === "native"
+    const balance = account.balances.find(
+      (b) => b.asset_type === "native"
     );
 
-    return nativeBalance ? nativeBalance.balance : "0";
+    return balance ? balance.balance : "0";
   } catch (err) {
-    console.log("Balance error:", err);
+    console.error("Balance error:", err);
     return "0";
-  }
-};
-export const userSignTransaction = async (xdr, publicKey) => {
-  try {
-   
-
-    console.log("Transaction to sign:", xdr);
-    console.log("Public Key:", publicKey);
-
-    return xdr; // fallback (important to avoid crash)
-  } catch (err) {
-    console.log("Sign error:", err);
-    return null;
   }
 };

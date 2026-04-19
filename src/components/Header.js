@@ -16,7 +16,7 @@ const Header = ({ setPubKey }) => {
         return;
       }
 
-      const bal = await getBalance();
+    const bal = await getBalance(key);
 
       setPublicKey(key);
       setPubKey(key);
