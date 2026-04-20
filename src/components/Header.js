@@ -1,29 +1,28 @@
 import React, { useState } from "react";
-import { checkConnection, retrievePublicKey, getBalance } from "./Freighter";
+import { requestAccess, getAddress } from "@stellar/freighter-api";
 
 const Header = ({ setPubKey }) => {
   const [connected, setConnected] = useState(false);
   const [publicKey, setPublicKey] = useState("");
-  const [balance, setBalance] = useState("0");
 
   const connectWallet = async () => {
     try {
-      const allowed = await checkConnection();
+      // Step 1: Permission
+      await requestAccess();
 
-      if (!allowed) {
-        alert("Permission denied");
+      // Step 2: Get address
+      const res = await getAddress();
+
+      if (res.error) {
+        alert("Error getting address");
         return;
       }
 
-      const key = await retrievePublicKey();
-      const bal = await getBalance();
-
-      setPublicKey(key);
-      setPubKey(key); // 🔥 MOST IMPORTANT
-      setBalance(Number(bal).toFixed(2));
+      setPublicKey(res.address);
+      setPubKey(res.address); // important
       setConnected(true);
 
-      console.log("Connected:", key);
+      alert("Connected: " + res.address);
 
     } catch (e) {
       console.error(e);
@@ -36,10 +35,9 @@ const Header = ({ setPubKey }) => {
       <h2>Stellar dApp</h2>
 
       {publicKey && (
-        <>
-          <div>{`${publicKey.slice(0, 4)}...${publicKey.slice(-4)}`}</div>
-          <div>Balance: {balance} XLM</div>
-        </>
+        <div>
+          {publicKey.slice(0, 4)}...{publicKey.slice(-4)}
+        </div>
       )}
 
       <button onClick={connectWallet}>
