@@ -173,7 +173,7 @@ All tests are passing successfully.
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/stellar-connect-wallet.git
+git clone https://github.com/RAHULRaa123/stellar-connect-wallet.git
 cd stellar-connect-wallet
 npm install
 npm start
