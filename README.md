@@ -33,7 +33,7 @@ This project demonstrates full-stack Web3 development including frontend, smart 
 
 This project primarily focuses on building an **Anonymous Feedback dApp** on the Stellar blockchain.
 
-Advanced features like token rewards and inter-contract calls are implemented as additional enhancements to showcase deeper understanding of smart contracts.
+Advanced features like token rewards and inter-contract calls are implemented as additional enhancements.
 
 ---
 
@@ -78,15 +78,15 @@ Advanced features like token rewards and inter-contract calls are implemented as
 
 * Loading states (UI feedback)
 * Error handling
-* Fully deployed app (Vercel)
+* Fully deployed app
 * Clean UI
 
-### 🟢 Level 4 (Advanced Features)
+### Level 4 (Advanced Features)
 
-* Inter-contract call (Caller → Feedback Contract)
-* Custom Token Contract (Mint + Balance)
-* On-chain interaction between multiple contracts
-* Production-ready contract structure
+* Inter-contract call
+* Custom Token Contract
+* Cross-contract interaction
+* Production-ready contracts
 
 ---
 
@@ -94,97 +94,89 @@ Advanced features like token rewards and inter-contract calls are implemented as
 
 ### 📌 Feedback Contract
 
-**Contract Address:**
+**Address:**
 CBXTSVTRCTXSJYYTGGV6G5R3F4EI73B3QW3SZ2MAZXMFEW445VQW7MOJ
-
-**Functions**
-
-* `send_feedback`
-* `fetch_feedback`
-
----
 
 ### 📌 Token Contract
 
-**Contract Address:**
+**Address:**
 CCUNRZQPLTIPELMXVCIMDLZP3B4RLXJCGB3NPWHDUNFJNVATKAGIRPAJ
 
-**Functions**
+### 📌 Caller Contract
 
-* `mint`
-* `balance`
-
----
-
-### 📌 Caller Contract (Inter-Contract)
-
-**Contract Address:**
+**Address:**
 CCRR3NARGJ6UYRKW7N42KVN6KL6VXEHXA7AHYMB7URS7T7FIE35XCLJC
 
-**Function**
-
-* `send_feedback_and_reward`
-  → Calls `send_feedback` in Feedback Contract
-
 ---
 
-## 🔄 Inter-Contract Interaction
+## 🔗 Transaction Proof
 
-The Caller Contract interacts with the Feedback Contract by invoking the `send_feedback` function.
-
-It also integrates with the Token Contract to reward users after submitting feedback.
-
-This demonstrates cross-contract communication on Stellar Soroban.
-
----
-
-## 🔗 Level 4 Transaction Proof
-
-**Transaction Hash:**
-f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c
-
-🔗 Explorer:
 https://stellar.expert/explorer/testnet/tx/f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c
+
+---
+
+## 👥 Testnet Users
+
+The following users tested the application:
+
+1. GCTTFOWRDZ6NSNKIHLPJYTDW3I2PLY25HPG5KBSG7F4IXLIXA7QD5TEP
+2. GCLACDLBPPYGIPAAGXGMMLUQTOFS2XVEOR763NUBYMYIC2RRAOPRADNJ
+3. GCFL72LTYYVA7HTEC2NYT3AKHYS5CUG5LG26Z5LB667QRDAOFDILH6E7
+4. GAD4RU2SEIQWXKKYYCPTAOT66BVWHJGIS2GI2CMMX327BYFDYZUBOXIM
+5. GALGHBSNXLWND3FI2QKHEMVYVOCMVGJMDR6GTOWPYXMOCXRKRO5TYK53
+
+---
+
+## 📊 User Feedback Data
+
+Google Form responses (Excel):
+
+https://docs.google.com/spreadsheets/d/1CEDVG9Mgv230Es2UmEXVUyZG3aYXmaSbkp8ATkloMp8/edit?usp=sharing
+
+---
+
+## 🧠 Feedback Analysis
+
+* Users successfully connected wallet and submitted feedback
+* Application is simple and easy to use
+* Minor improvements suggested in UI responsiveness and loading experience
+
+---
+
+## 🚀 Improvements Implemented
+
+* Improved loading states
+* Enhanced UI responsiveness
+* Better feedback submission handling
+
+Commit history:
+https://github.com/RAHULRaa123/stellar-connect-wallet/commits/main
 
 ---
 
 ## 📸 Screenshots
 
-### ✅ Inter-contract call success
-
 ![Inter Contract](./inter-contract-success.png)
-
-### ✅ Fetch feedback from blockchain
-
 ![Fetch Feedback](./fetch-feedback.png)
-
-### 📱 Mobile Responsive
-
 ![Mobile View](./mobile-view.png)
 
 ---
 
-## ⚡ Performance & UX Improvements
+## ⚡ Performance
 
-* Loading states added for better user experience
-* Error handling implemented
-* Basic caching used to reduce repeated blockchain calls
+* Loading states
+* Error handling
+* Basic caching
 
 ---
 
 ## 🧪 Tests
 
-### ✅ Test Cases
-
 * Feedback submission works
-* Empty feedback is rejected
-* Feedback count works
-
-### 📸 Test Output
+* Empty feedback rejected
+* Feedback count verified
 
 ![Tests](./test-output.png)
-
-All tests are passing successfully.
 
 ---
 
@@ -199,19 +191,9 @@ npm start
 
 ---
 
-## ⚙️ CI/CD Pipeline
+## ⚙️ CI/CD
 
 ![CI](https://github.com/RAHULRaa123/stellar-connect-wallet/actions/workflows/main.yml/badge.svg)
-
-This project includes a **GitHub Actions CI/CD pipeline** that automatically runs on every push to the main branch.
-
-### ✅ Features:
-
-* Automatic workflow execution
-* Continuous Integration setup
-* Ensures project consistency
-
-![CI/CD](./ci-cd.png)
 
 ---
 
@@ -223,9 +205,6 @@ Rahul Saini
 
 ## ✅ Result
 
-Successfully executed inter-contract call, minted tokens, and stored data on-chain:
-
-```bash
-2
-"FINAL SUCCESS"
+```
+FINAL SUCCESS
 ```
