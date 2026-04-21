@@ -8,7 +8,7 @@ https://stellar-connect-wallet-l4vw.vercel.app
 
 ## 🎥 Demo Video
 
-This demo shows wallet connection, feedback submission, and on-chain interaction on Stellar.
+This demo showcases full MVP flow including wallet connection, feedback submission, on-chain storage, and token reward.
 
 https://youtu.be/5wjd01jvn_A
 
@@ -44,6 +44,17 @@ Advanced features like token rewards and inter-contract calls are implemented as
 * Mobile responsive UI
 * Optimized contract interactions
 * Clean and scalable project structure
+
+---
+
+## 🏗️ Architecture
+
+Frontend (React) → Stellar SDK → Smart Contracts (Soroban) → Stellar Testnet
+
+* React UI handles user interaction
+* Freighter wallet signs transactions
+* Smart contracts store and fetch feedback
+* Token contract rewards users
 
 ---
 
@@ -130,7 +141,6 @@ The following users tested the application:
 ## 📊 User Feedback Data
 
 Google Form responses (Excel):
-
 https://docs.google.com/spreadsheets/d/1CEDVG9Mgv230Es2UmEXVUyZG3aYXmaSbkp8ATkloMp8/edit?usp=sharing
 
 ---
