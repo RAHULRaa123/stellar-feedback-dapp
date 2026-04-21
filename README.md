@@ -29,6 +29,14 @@ This project demonstrates full-stack Web3 development including frontend, smart 
 
 ---
 
+## 🎯 Core Focus
+
+This project primarily focuses on building an **Anonymous Feedback dApp** on the Stellar blockchain.
+
+Advanced features like token rewards and inter-contract calls are implemented as additional enhancements to showcase deeper understanding of smart contracts.
+
+---
+
 ## 🔄 How It Works
 
 1. User connects Freighter wallet
