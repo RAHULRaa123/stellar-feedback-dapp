@@ -1,16 +1,15 @@
-# 🚀 Stellar Connect Wallet Mini dApp
+# 🚀 Stellar Connect Wallet
 
 ## 🔗 Live Demo
 
-https://stellar-connect-wallet-l4vw.vercel.app
+[Live App](https://stellar-connect-wallet-l4vw.vercel.app)
 
 ---
 
 ## 🎥 Demo Video
 
 This demo showcases full MVP flow including wallet connection, feedback submission, on-chain storage, and token reward.
-
-https://youtu.be/5wjd01jvn_A
+[Watch Demo Video](https://youtu.be/5wjd01jvn_A)
 
 ---
 
@@ -135,8 +134,7 @@ CCRR3NARGJ6UYRKW7N42KVN6KL6VXEHXA7AHYMB7URS7T7FIE35XCLJC
 
 ## 🔗 Transaction Proof
 
-https://stellar.expert/explorer/testnet/tx/f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c
-
+[View Transaction](https://stellar.expert/explorer/testnet/tx/f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c)
 ---
 
 ## 👥 Testnet Users
@@ -154,7 +152,7 @@ The following users tested the application:
 ## 📊 User Feedback Data
 
 Google Form responses (Excel):
-https://docs.google.com/spreadsheets/d/1CEDVG9Mgv230Es2UmEXVUyZG3aYXmaSbkp8ATkloMp8/edit?usp=sharing
+[View User Feedback Data](https://docs.google.com/spreadsheets/d/1CEDVG9Mgv230Es2UmEXVUyZG3aYXmaSbkp8ATkloMp8/edit?usp=sharing)
 
 ---
 
@@ -173,7 +171,7 @@ https://docs.google.com/spreadsheets/d/1CEDVG9Mgv230Es2UmEXVUyZG3aYXmaSbkp8ATklo
 * Better feedback submission handling
 
 Commit history:
-https://github.com/RAHULRaa123/stellar-connect-wallet/commits/main
+[View Commit History](https://github.com/RAHULRaa123/stellar-connect-wallet/commits/main)
 
 ---
 
@@ -194,12 +192,15 @@ https://github.com/RAHULRaa123/stellar-connect-wallet/commits/main
 ---
 
 ## 🧪 Tests
+The application includes multiple test cases:
 
 * Feedback submission works
 * Empty feedback rejected
 * Feedback count verified
 * Smart contract call verification test passed
 * App rendering test passed
+
+All tests are successfully passing.
 
 ![Tests](./test-output.png)
 
@@ -226,10 +227,3 @@ npm start
 
 Rahul Saini
 
----
-
-## ✅ Result
-
-```
-FINAL SUCCESS
-```
