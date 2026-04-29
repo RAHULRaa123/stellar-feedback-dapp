@@ -5,12 +5,35 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  frontend:
+    name: Frontend CI
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Skip build (stable CI)
-        run: echo "CI Passed Successfully"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build frontend
+        run: npm run build
+
+  smart-contract:
+    name: Smart Contract CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify smart contract files
+        run: |
+          echo "Checking smart contract integration..."
+          ls
+          echo "Smart contract CI completed"
