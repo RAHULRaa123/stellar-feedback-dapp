@@ -216,11 +216,31 @@ npm start
 ```
 
 ---
+## ⚙️ CI/CD Pipeline
 
-## ⚙️ CI/CD
+This project uses GitHub Actions for automated CI/CD.
 
+### Frontend CI
+- Install dependencies
+- Build React application
+
+### Smart Contract CI
+- Smart contract validation step included
+
+### Testing Pipeline
+- Automated test workflow runs on every push
+
+### Deployment
+- Auto deployed using Vercel on every push
+
+### CI/CD Status
 ![CI](https://github.com/RAHULRaa123/stellar-feedback-dapp/actions/workflows/main.yml/badge.svg)
 
+### Pipeline Proof
+![CI/CD](./cicd.png)
+
+GitHub Actions:
+https://github.com/RAHULRaa123/stellar-feedback-dapp/actions
 ---
 
 ## 👨‍💻 Author
