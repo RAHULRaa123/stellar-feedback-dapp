@@ -20,6 +20,7 @@ import EscrowPayment from "./components/EscrowPayment";
 import AgentDiscovery from "./components/AgentDiscovery";
 import SettlementReliability from "./components/SettlementReliability";
 import LiquidityForecast from "./components/LiquidityForecast";
+import BusinessDirectory from "./components/BusinessDirectory";
 
 export const pubKeyData = createContext();
 
@@ -59,6 +60,8 @@ function App() {
         {page === "Settlement" && <SettlementReliability />}
 
         {page === "Forecast" && <LiquidityForecast />}
+
+        {page === "Business Directory" && <BusinessDirectory />}
 
         <p>
           {pubKey ? "Connected: " + pubKey : "Not Connected"}
