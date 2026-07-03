@@ -12,6 +12,7 @@ import RewardCenter from "./components/RewardCenter";
 import TransactionHistory from "./components/TransactionHistory";
 import ReputationScore from "./components/ReputationScore";
 import BusinessVerification from "./components/BusinessVerification";
+import EscrowPayment from "./components/EscrowPayment";
 export const pubKeyData = createContext();
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
 
       <BusinessVerification />
 
+      <EscrowPayment />
+      
       <p>
         {pubKey ? "Connected: " + pubKey : "Not Connected"}
       </p>
