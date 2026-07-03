@@ -14,6 +14,7 @@ import ReputationScore from "./components/ReputationScore";
 import BusinessVerification from "./components/BusinessVerification";
 import EscrowPayment from "./components/EscrowPayment";
 import AgentDiscovery from "./components/AgentDiscovery";
+import SettlementReliability from "./components/SettlementReliability";
 export const pubKeyData = createContext();
 
 function App() {
@@ -46,7 +47,9 @@ function App() {
 
       <AgentDiscovery />
 
-      
+      <SettlementReliability />
+
+
       <p>
         {pubKey ? "Connected: " + pubKey : "Not Connected"}
       </p>
