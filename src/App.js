@@ -1,12 +1,16 @@
-import './App.css';
-import { useState, createContext } from 'react';
-import Header from './components/Header';
-import SendFeedback from './components/SendFeedback';
-import FetchFeedback from './components/FetchFeedback';
-import BusinessHome from './components/BusinessHome';
-import BusinessRegistration from './components/BusinessRegistration';
-import BusinessDashboard from './components/BusinessDashboard';
-import BusinessProfile from './components/BusinessProfile';
+import "./App.css";
+import { useState, createContext } from "react";
+
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+
+import SendFeedback from "./components/SendFeedback";
+import FetchFeedback from "./components/FetchFeedback";
+
+import BusinessHome from "./components/BusinessHome";
+import BusinessRegistration from "./components/BusinessRegistration";
+import BusinessDashboard from "./components/BusinessDashboard";
+import BusinessProfile from "./components/BusinessProfile";
 import CustomerReview from "./components/CustomerReview";
 import RewardCenter from "./components/RewardCenter";
 import TransactionHistory from "./components/TransactionHistory";
@@ -16,52 +20,55 @@ import EscrowPayment from "./components/EscrowPayment";
 import AgentDiscovery from "./components/AgentDiscovery";
 import SettlementReliability from "./components/SettlementReliability";
 import LiquidityForecast from "./components/LiquidityForecast";
+
 export const pubKeyData = createContext();
 
 function App() {
   const [pubKey, setPubKey] = useState("");
+  const [page, setPage] = useState("Home");
 
   return (
-    <div className="App">
+    <div style={{ display: "flex" }}>
+      <Sidebar setPage={setPage} />
 
-      <Header setPubKey={setPubKey} />
+      <div style={{ flex: 1 }}>
+        <Header setPubKey={setPubKey} />
 
-      <BusinessHome />
+        {page === "Home" && <BusinessHome />}
 
-      <BusinessRegistration />
+        {page === "Registration" && <BusinessRegistration />}
 
-      <BusinessDashboard />
+        {page === "Profile" && <BusinessProfile />}
 
-      <RewardCenter />
+        {page === "Reviews" && <CustomerReview />}
 
-      <TransactionHistory />
+        {page === "Dashboard" && <BusinessDashboard />}
 
-      <BusinessProfile />
+        {page === "Rewards" && <RewardCenter />}
 
-      <CustomerReview />
+        {page === "Transactions" && <TransactionHistory />}
 
-      <ReputationScore />
+        {page === "Reputation" && <ReputationScore />}
 
-      <BusinessVerification />
+        {page === "Verification" && <BusinessVerification />}
 
-      <EscrowPayment />
+        {page === "Escrow" && <EscrowPayment />}
 
-      <AgentDiscovery />
+        {page === "Agents" && <AgentDiscovery />}
 
-      <SettlementReliability />
+        {page === "Settlement" && <SettlementReliability />}
 
-      <LiquidityForecast />
+        {page === "Forecast" && <LiquidityForecast />}
 
+        <p>
+          {pubKey ? "Connected: " + pubKey : "Not Connected"}
+        </p>
 
-      <p>
-        {pubKey ? "Connected: " + pubKey : "Not Connected"}
-      </p>
-
-      <pubKeyData.Provider value={pubKey}>
-        <SendFeedback />
-        <FetchFeedback />
-      </pubKeyData.Provider>
-
+        <pubKeyData.Provider value={pubKey}>
+          <SendFeedback />
+          <FetchFeedback />
+        </pubKeyData.Provider>
+      </div>
     </div>
   );
 }
