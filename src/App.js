@@ -10,6 +10,7 @@ import BusinessProfile from './components/BusinessProfile';
 import CustomerReview from "./components/CustomerReview";
 import RewardCenter from "./components/RewardCenter";
 import TransactionHistory from "./components/TransactionHistory";
+import ReputationScore from "./components/ReputationScore";
 export const pubKeyData = createContext();
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
       <BusinessProfile />
 
       <CustomerReview />
+
+      <ReputationScore />
 
       <p>
         {pubKey ? "Connected: " + pubKey : "Not Connected"}
