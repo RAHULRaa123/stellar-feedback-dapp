@@ -6,6 +6,7 @@ import FetchFeedback from './components/FetchFeedback';
 import BusinessHome from './components/BusinessHome';
 import BusinessRegistration from './components/BusinessRegistration';
 import BusinessDashboard from './components/BusinessDashboard';
+import BusinessProfile from './components/BusinessProfile';
 export const pubKeyData = createContext();
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
       <BusinessRegistration />
 
       <BusinessDashboard />
+
+      <BusinessProfile />
 
       <p>
         {pubKey ? "Connected: " + pubKey : "Not Connected"}
