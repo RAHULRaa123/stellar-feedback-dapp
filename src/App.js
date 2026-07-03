@@ -7,6 +7,7 @@ import BusinessHome from './components/BusinessHome';
 import BusinessRegistration from './components/BusinessRegistration';
 import BusinessDashboard from './components/BusinessDashboard';
 import BusinessProfile from './components/BusinessProfile';
+import CustomerReview from "./components/CustomerReview";
 export const pubKeyData = createContext();
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <BusinessDashboard />
 
       <BusinessProfile />
+      <CustomerReview />
 
       <p>
         {pubKey ? "Connected: " + pubKey : "Not Connected"}
