@@ -8,6 +8,7 @@ import BusinessRegistration from './components/BusinessRegistration';
 import BusinessDashboard from './components/BusinessDashboard';
 import BusinessProfile from './components/BusinessProfile';
 import CustomerReview from "./components/CustomerReview";
+import RewardCenter from "./components/RewardCenter";
 export const pubKeyData = createContext();
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
 
       <BusinessDashboard />
 
+      <RewardCenter />
+
       <BusinessProfile />
+      
       <CustomerReview />
 
       <p>
