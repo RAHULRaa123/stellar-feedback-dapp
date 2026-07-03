@@ -15,6 +15,7 @@ import BusinessVerification from "./components/BusinessVerification";
 import EscrowPayment from "./components/EscrowPayment";
 import AgentDiscovery from "./components/AgentDiscovery";
 import SettlementReliability from "./components/SettlementReliability";
+import LiquidityForecast from "./components/LiquidityForecast";
 export const pubKeyData = createContext();
 
 function App() {
@@ -48,6 +49,8 @@ function App() {
       <AgentDiscovery />
 
       <SettlementReliability />
+
+      <LiquidityForecast />
 
 
       <p>
