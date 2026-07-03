@@ -2,61 +2,48 @@ import { useEffect, useState } from "react";
 
 function BusinessDashboard() {
   const [stats, setStats] = useState({
-    totalReviews: 0,
+    totalFeedback: 0,
     averageRating: 0,
-    totalBusinesses: 0,
-    rewards: 0,
+    rewards: "120 XLM",
+    reputation: "0%",
   });
 
   useEffect(() => {
     const reviews =
       JSON.parse(localStorage.getItem("reviews")) || [];
 
-    const business =
-      JSON.parse(localStorage.getItem("businessProfile"));
+    const totalFeedback = reviews.length;
 
-    const totalReviews = reviews.length;
+    let averageRating = 0;
 
-    const totalRating = reviews.reduce(
-      (sum, item) => sum + Number(item.rating),
-      0
-    );
+    if (totalFeedback > 0) {
+      const total = reviews.reduce(
+        (sum, item) => sum + Number(item.rating),
+        0
+      );
 
-    const averageRating =
-      totalReviews > 0
-        ? (totalRating / totalReviews).toFixed(1)
-        : 0;
+      averageRating = (total / totalFeedback).toFixed(1);
+    }
+
+    const reputation =
+      totalFeedback === 0
+        ? "0%"
+        : Math.min(
+            100,
+            Math.round((averageRating / 5) * 100)
+          ) + "%";
 
     setStats({
-      totalReviews,
+      totalFeedback,
       averageRating,
-      totalBusinesses: business ? 1 : 0,
-      rewards: totalReviews * 5,
+      rewards: "120 XLM",
+      reputation,
     });
   }, []);
 
-  const cards = [
-    {
-      title: "Total Reviews",
-      value: stats.totalReviews,
-    },
-    {
-      title: "Average Rating",
-      value: stats.averageRating + " / 5",
-    },
-    {
-      title: "Registered Businesses",
-      value: stats.totalBusinesses,
-    },
-    {
-      title: "Rewards Distributed",
-      value: stats.rewards + " XLM",
-    },
-  ];
-
   return (
     <div style={{ margin: "20px" }}>
-      <h2>Business Analytics Dashboard</h2>
+      <h2>Business Dashboard</h2>
 
       <div
         style={{
@@ -66,24 +53,43 @@ function BusinessDashboard() {
           gap: "20px",
         }}
       >
-        {cards.map((item, index) => (
-          <div
-            key={index}
-            style={{
-              border: "1px solid #ddd",
-              borderRadius: "10px",
-              padding: "20px",
-              textAlign: "center",
-              background: "#fff",
-              boxShadow: "0 2px 8px rgba(0,0,0,.1)",
-            }}
-          >
-            <h3>{item.title}</h3>
+        <Card
+          title="Total Feedback"
+          value={stats.totalFeedback}
+        />
 
-            <h2>{item.value}</h2>
-          </div>
-        ))}
+        <Card
+          title="Average Rating"
+          value={stats.averageRating}
+        />
+
+        <Card
+          title="Rewards Distributed"
+          value={stats.rewards}
+        />
+
+        <Card
+          title="Reputation Score"
+          value={stats.reputation}
+        />
       </div>
+    </div>
+  );
+}
+
+function Card({ title, value }) {
+  return (
+    <div
+      style={{
+        border: "1px solid #ddd",
+        borderRadius: "10px",
+        padding: "20px",
+        textAlign: "center",
+        background: "#fff",
+      }}
+    >
+      <h3>{title}</h3>
+      <h2>{value}</h2>
     </div>
   );
 }
