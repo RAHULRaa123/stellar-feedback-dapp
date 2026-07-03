@@ -3,6 +3,8 @@ import { useState, createContext } from 'react';
 import Header from './components/Header';
 import SendFeedback from './components/SendFeedback';
 import FetchFeedback from './components/FetchFeedback';
+import BusinessHome from './components/BusinessHome';
+import BusinessRegistration from './components/BusinessRegistration';
 
 export const pubKeyData = createContext();
 
@@ -13,6 +15,10 @@ function App() {
     <div className="App">
 
       <Header setPubKey={setPubKey} />
+
+      <BusinessHome />
+
+      <BusinessRegistration />
 
       <p>
         {pubKey ? "Connected: " + pubKey : "Not Connected"}
