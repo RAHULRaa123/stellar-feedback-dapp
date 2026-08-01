@@ -206,10 +206,28 @@ https://stellar.expert/explorer/testnet/tx/f498be49a48fd79f2fe7f4ff6a53ec09df5f9
 
 ---
 
-## 📸 Screenshots
+## 📸 Product Screenshots
 
-![Inter Contract](./inter-contract-success.png)
+### 🔗 Smart Contract Interaction
+
+Shows successful interaction between frontend and Soroban smart contracts.
+
+![Inter Contract Success](./inter-contract-success.png)
+
+---
+
+### 📥 Feedback Retrieval
+
+Displays fetching of blockchain-stored feedback data.
+
 ![Fetch Feedback](./fetch-feedback.png)
+
+---
+
+### 📱 Mobile Responsive View
+
+Demonstrates the responsive user experience on mobile devices.
+
 ![Mobile View](./mobile-view.png)
 
 ---
