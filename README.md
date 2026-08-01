@@ -29,6 +29,24 @@ The project combines blockchain transparency with business trust to create a sca
 
 ---
 
+## 🌐 Product Overview
+
+Stellar Trust Network is building a decentralized trust layer for businesses on the Stellar ecosystem.
+
+The platform enables businesses to create verified profiles, collect customer reviews, build reputation scores, and perform transparent transactions using blockchain technology.
+
+### Core Platform Modules
+
+- 🏢 Business Identity & Verification
+- ⭐ Reputation and Review System
+- 🔐 Escrow-based Transaction Workflow
+- 📊 Business Analytics
+- 🤝 Customer Trust Network
+- 💎 Reward and Incentive System
+
+The goal is to create a reliable business discovery and transaction ecosystem where trust is verifiable, transparent, and decentralized.
+
+---
 ## 🎯 Core Focus
 
 Building a decentralized trust infrastructure for businesses using Stellar. The platform combines business verification, customer reputation, escrow payments and analytics into one scalable ecosystem.
@@ -92,7 +110,7 @@ User → React UI → Freighter → Smart Contract → Blockchain → UI
 * Token reward system
 * Production-ready contracts
 
- ### Business Platform
+### Business Platform
 
 - Business Registration
 - Business Profile Management
