@@ -1,5 +1,10 @@
 # 🚀 Stellar Trust Network
 
+![Stellar](https://img.shields.io/badge/Stellar-Soroban-blue)
+![React](https://img.shields.io/badge/Frontend-React-61DAFB)
+![Blockchain](https://img.shields.io/badge/Blockchain-Web3-purple)
+![CI/CD](https://github.com/RAHULRaa123/stellar-feedback-dapp/actions/workflows/main.yml/badge.svg)
+
 ## 🔗 Live Demo
 
 [Live App](https://stellar-feedback-dapp-l4vw.vercel.app)
@@ -47,6 +52,7 @@ The platform enables businesses to create verified profiles, collect customer re
 The goal is to create a reliable business discovery and transaction ecosystem where trust is verifiable, transparent, and decentralized.
 
 ---
+
 ## 🎯 Core Focus
 
 Building a decentralized trust infrastructure for businesses using Stellar. The platform combines business verification, customer reputation, escrow payments and analytics into one scalable ecosystem.
@@ -258,10 +264,6 @@ All tests passing ✅
 * GitHub Actions integrated
 * Auto build + test
 * Auto deploy via Vercel
-
-### CI Badge
-
-![CI](https://github.com/RAHULRaa123/stellar-feedback-dapp/actions/workflows/main.yml/badge.svg)
 
 GitHub Actions:
 https://github.com/RAHULRaa123/stellar-feedback-dapp/actions
