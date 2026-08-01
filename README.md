@@ -7,7 +7,7 @@
 
 ## 🔗 Live Demo
 
-[Live App](https://stellar-feedback-dapp-l4vw.vercel.app)
+[Live App](https://stellar-connect-wallet-k4zm.vercel.app)
 
 ---
 
