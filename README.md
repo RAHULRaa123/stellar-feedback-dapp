@@ -1,4 +1,4 @@
-# 🚀 Stellar Feedback & Reward dApp
+# 🚀 Stellar Trust Network
 
 ## 🔗 Live Demo
 
@@ -14,23 +14,24 @@
 
 ## 📌 Description
 
-This is a complete **end-to-end Stellar MVP dApp** built on the **Stellar Testnet** using Freighter Wallet.
+Stellar Trust Network is a decentralized business reputation, verification and escrow platform built on the Stellar Network.
 
-The application allows users to:
+The platform helps businesses establish trust by enabling them to:
 
-* Connect wallet
-* Submit anonymous feedback
-* Store feedback on-chain
-* Fetch feedback from blockchain
-* Receive token rewards
+- Register their business
+- Build a verified business profile
+- Collect customer reviews
+- Generate reputation scores
+- Secure transactions using escrow workflows
+- Explore trusted businesses through a business directory
 
-This project demonstrates **real-world MVP validation with actual users**.
+The project combines blockchain transparency with business trust to create a scalable ecosystem for merchants and customers.
 
 ---
 
 ## 🎯 Core Focus
 
-Anonymous Feedback dApp with **user validation + reward system using smart contracts**.
+Building a decentralized trust infrastructure for businesses using Stellar. The platform combines business verification, customer reputation, escrow payments and analytics into one scalable ecosystem.
 
 ---
 
@@ -90,6 +91,23 @@ User → React UI → Freighter → Smart Contract → Blockchain → UI
 * Inter-contract calls
 * Token reward system
 * Production-ready contracts
+
+ ### Business Platform
+
+- Business Registration
+- Business Profile Management
+- Customer Reviews
+- Reputation Score
+- Business Verification
+- Trust Badge
+- Business Directory
+- Analytics Dashboard
+- Reward Center
+- Transaction History
+- Escrow Payment Workflow
+- Agent Discovery
+- Settlement Reliability
+- Liquidity Forecast
 
 ---
 
@@ -214,12 +232,27 @@ https://github.com/RAHULRaa123/stellar-feedback-dapp/actions
 
 ---
 
-## 🚀 Future Scope
+## 🚀 Future Roadmap
 
-* Real-time feedback updates
-* Analytics dashboard
-* Advanced rewards system
-* UI/UX improvements
+### Phase 1
+- Mainnet deployment
+- Business verification on Stellar
+- Merchant onboarding
+
+### Phase 2
+- NFT-based Trust Badges
+- Decentralized reputation protocol
+- Multi-business management dashboard
+
+### Phase 3
+- AI-powered fraud detection
+- Cross-border merchant payments
+- Public API for business verification
+- Mobile application (Android & iOS)
+
+### Long-term Vision
+
+Build a decentralized trust layer for businesses on Stellar where merchants, customers, and payment providers can interact securely using verifiable reputation and transparent transaction history.
 
 ---
 
