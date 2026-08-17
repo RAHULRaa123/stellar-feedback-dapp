@@ -1,8 +1,8 @@
-# 🚀 Stellar Feedback & Reward dApp
+# 🚀 Stellar Trust Network
 
 ## 🔗 Live Demo
 
-[Live App](https://stellar-feedback-dapp-l4vw.vercel.app)
+[Live App](https://stellar-trust-network.vercel.app/)
 
 ---
 
@@ -14,137 +14,195 @@
 
 ## 📌 Description
 
-This is a complete **end-to-end Stellar MVP dApp** built on the **Stellar Testnet** using Freighter Wallet.
+**Stellar Trust Network** is a decentralized business reputation, verification, and transaction trust platform built on the **Stellar Network**.
 
-The application allows users to:
+The platform combines blockchain-based transparency with business trust features, enabling businesses to establish verified profiles, collect customer reviews, build reputation scores, and support transparent transaction workflows.
 
-* Connect wallet
-* Submit anonymous feedback
-* Store feedback on-chain
-* Fetch feedback from blockchain
-* Receive token rewards
-
-This project demonstrates **real-world MVP validation with actual users**.
+The project evolved from an anonymous feedback and reward dApp into a broader **business trust ecosystem** built around Stellar and Soroban smart contracts.
 
 ---
 
 ## 🎯 Core Focus
 
-Anonymous Feedback dApp with **user validation + reward system using smart contracts**.
+Building a decentralized trust infrastructure for businesses using Stellar.
+
+The platform focuses on:
+
+* Business identity and verification
+* Customer reviews and reputation
+* Transparent blockchain-based transactions
+* Escrow workflows
+* Business discovery
+* Analytics and trust insights
+* Rewards and incentives
 
 ---
 
-## 🔌 Smart Contract Integration (Frontend Calls)
+## 🌐 Product Overview
 
-* send_feedback → Stores feedback on-chain
-* fetch_feedback → Retrieves feedback
-* send_feedback_and_reward → Inter-contract call for reward
+Stellar Trust Network provides a unified platform where businesses can establish their identity, build reputation, interact with customers, and participate in transparent blockchain-powered workflows.
 
----
+### Core Platform Modules
 
-## 🏗️ Architecture Document
-
-- Frontend: React  
-- Blockchain: Stellar Testnet  
-- Smart Contracts: Soroban  
-- Wallet: Freighter  
-- Deployment: Vercel  
-
-Flow:  
-User → React UI → Freighter → Smart Contract → Blockchain → UI
-
----
-
-## 🔄 How It Works
-
-1. User connects Freighter wallet
-2. User submits feedback
-3. Feedback stored on blockchain
-4. Feedback fetched & displayed
-5. Token reward sent
+* 🏢 Business Registration
+* 👤 Business Profile Management
+* 🔐 Business Verification
+* ⭐ Customer Reviews
+* 📊 Reputation Score
+* 🏅 Trust Badge
+* 🏪 Business Directory
+* 📈 Analytics Dashboard
+* 💎 Reward Center
+* 💳 Escrow Payment Workflow
+* 🤝 Agent Discovery
+* 📜 Transaction History
+* 📡 Settlement Reliability
+* 💧 Liquidity Forecast
 
 ---
 
-## 🟢 Features
+## 🔌 Smart Contract Integration
 
-### Level 1
+The platform includes Stellar/Soroban smart contract integration for the feedback and reward workflow.
+
+### Contract Operations
+
+* `send_feedback` → Stores feedback on-chain
+* `fetch_feedback` → Retrieves blockchain-stored feedback
+* `send_feedback_and_reward` → Performs an inter-contract call for rewards
+
+This demonstrates how the frontend interacts with Soroban smart contracts through the Stellar ecosystem.
+
+---
+
+## 🏗️ Architecture
+
+### Technology Stack
+
+* **Frontend:** React
+* **Blockchain:** Stellar Testnet
+* **Smart Contracts:** Soroban
+* **Wallet:** Freighter
+* **Deployment:** Vercel
+* **CI/CD:** GitHub Actions
+
+### Application Flow
+
+```text
+User
+  ↓
+React UI
+  ↓
+Freighter Wallet
+  ↓
+Soroban Smart Contract
+  ↓
+Stellar Testnet
+  ↓
+Blockchain Transaction
+  ↓
+Application UI
+```
+
+---
+
+## 🔄 Feedback & Reward Workflow
+
+The original core dApp workflow is integrated into the broader trust platform:
+
+1. User connects a Freighter wallet
+2. User submits anonymous feedback
+3. Feedback is stored on the Stellar blockchain
+4. Feedback can be retrieved from the smart contract
+5. The reward workflow can trigger an inter-contract call
+6. Transaction results are reflected in the application
+
+---
+
+## 🟢 Platform Features
+
+### Blockchain Foundation
 
 * Wallet Connect / Disconnect
-* Display Balance
-* Send XLM
+* XLM Balance Display
+* XLM Transfer
+* Soroban Smart Contract Integration
+* On-chain Feedback Storage
+* Blockchain Feedback Retrieval
+* Inter-contract Calls
+* Token Reward Workflow
 
-### Level 2
+### Business Trust Platform
 
-* Smart contract integration
-* Feedback storage
-* Fetch feedback
+* Business Registration
+* Business Profile Management
+* Customer Reviews
+* Reputation Scoring
+* Business Verification
+* Trust Badges
+* Business Directory
+* Analytics Dashboard
+* Reward Center
+* Transaction History
+* Escrow Payment Workflow
+* Agent Discovery
+* Settlement Reliability
+* Liquidity Forecast
 
-### Level 3
+### User Experience
 
-* Loading states
-* Error handling
-* Full UI flow
-
-### Level 4
-
-* Inter-contract calls
-* Token reward system
-* Production-ready contracts
+* Loading States
+* Error Handling
+* Responsive UI
+* Mobile-friendly experience
+* Optimized contract interaction flow
 
 ---
 
-## 👥 Testnet Users (Validated)
+## 👥 Testnet Validation
 
-The following real users tested the application:
+The feedback workflow was tested using multiple Stellar Testnet wallets.
 
-1. GCTTFOWRDZ6NSNKIHLPJYTDW3I2PLY25HPG5KBSG7F4IXLIXA7QD5TEP
-2. GCLACDLBPPYGIPAAGXGMMLUQTOFS2XVEOR763NUBYMYIC2RRAOPRADNJ
-3. GCFL72LTYYVA7HTEC2NYT3AKHYS5CUG5LG26Z5LB667QRDAOFDILH6E7
-4. GAD4RU2SEIQWXKKYYCPTAOT66BVWHJGIS2GI2CMMX327BYFDYZUBOXIM
-5. GALGHBSNXLWND3FI2QKHEMVYVOCMVGJMDR6GTOWPYXMOCXRKRO5TYK53
+### Validated Testnet Users
 
-### 🧪 How Users Tested
+1. `GCTTFOWRDZ6NSNKIHLPJYTDW3I2PLY25HPG5KBSG7F4IXLIXA7QD5TEP`
+2. `GCLACDLBPPYGIPAAGXGMMLUQTOFS2XVEOR763NUBYMYIC2RRAOPRADNJ`
+3. `GCFL72LTYYVA7HTEC2NYT3AKHYS5CUG5LG26Z5LB667QRDAOFDILH6E7`
+4. `GAD4RU2SEIQWXKKYYCPTAOT66BVWHJGIS2GI2CMMX327BYFDYZUBOXIM`
+5. `GALGHBSNXLWND3FI2QKHEMVYVOCMVGJMDR6GTOWPYXMOCXRKRO5TYK53`
 
-Each user:
+### Testing Flow
 
-* Connected wallet
+Each test user:
+
+* Connected a wallet
 * Submitted feedback
-* Verified transaction on blockchain
-* Checked feedback retrieval
+* Verified the blockchain transaction
+* Retrieved feedback from the smart contract
 
 ---
 
-## 📊 User Feedback Data
+## 📊 User Feedback
 
-[View Google Sheet (Excel Export)](https://docs.google.com/spreadsheets/d/1CEDVG9Mgv230Es2UmEXVUyZG3aYXmaSbkp8ATkloMp8/edit?usp=sharing)
+User testing was used to identify usability improvements.
 
----
+### Feedback Data
 
-## 🧠 Feedback Analysis
+[View User Feedback Data](https://docs.google.com/spreadsheets/d/1CEDVG9Mgv230Es2UmEXVUyZG3aYXmaSbkp8ATkloMp8/edit?usp=sharing)
 
-* Users found app easy to use
-* Feedback submission working correctly
-* Minor UI/UX improvements suggested
+### Key Observations
 
----
+* Feedback submission worked correctly
+* Users found the application easy to use
+* Minor UI/UX improvements were identified
 
-## 🔄 Iteration (IMPORTANT)
+### Improvements Implemented
 
-### 🧾 User Feedback
+Based on testing feedback:
 
-* UI slow during submission
-* Loading unclear
-* Mobile UI needs improvement
-
-### 🚀 Improvements Implemented
-
-* Added loading states
-* Improved responsiveness
-* Enhanced UX
-
-### 🔗 Commit Proof
-
-https://github.com/RAHULRaa123/stellar-feedback-dapp/commit/19607a8e6fdb5f002fdb701d0b6c2cdec7fd08c0
+* Added clearer loading states
+* Improved responsive behavior
+* Enhanced the overall user experience
 
 ---
 
@@ -152,77 +210,138 @@ https://github.com/RAHULRaa123/stellar-feedback-dapp/commit/19607a8e6fdb5f002fdb
 
 ### Feedback Contract
 
+```text
 CBXTSVTRCTXSJYYTGGV6G5R3F4EI73B3QW3SZ2MAZXMFEW445VQW7MOJ
+```
 
 ### Token Contract
 
+```text
 CCUNRZQPLTIPELMXVCIMDLZP3B4RLXJCGB3NPWHDUNFJNVATKAGIRPAJ
+```
 
 ### Caller Contract
 
+```text
 CCRR3NARGJ6UYRKW7N42KVN6KL6VXEHXA7AHYMB7URS7T7FIE35XCLJC
+```
 
 ---
 
 ## 🔗 Transaction Proof
 
-https://stellar.expert/explorer/testnet/tx/f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c
+A Stellar Testnet transaction demonstrating the smart contract workflow:
+
+[View Transaction on Stellar Expert](https://stellar.expert/explorer/testnet/tx/f498be49a48fd79f2fe7f4ff6a53ec09df5f911ed631ae34f2e18bde448c480c)
 
 ---
 
 ## 📸 Screenshots
 
+### Smart Contract Interaction
+
 ![Inter Contract](./inter-contract-success.png)
+
+Successful interaction between the application and Soroban smart contracts.
+
+### Feedback Retrieval
+
 ![Fetch Feedback](./fetch-feedback.png)
+
+Retrieval of blockchain-stored feedback.
+
+### Mobile Responsive View
+
 ![Mobile View](./mobile-view.png)
 
----
-
-## ⚡ Performance
-
-* Loading states
-* Error handling
-* Optimized contract calls
+Responsive application experience on mobile devices.
 
 ---
 
-## 🧪 Tests
+## 🧪 Testing
 
-* Feedback submission ✔
-* Empty feedback validation ✔
-* Feedback count ✔
-* Smart contract call ✔
+The project includes automated tests covering core feedback functionality.
 
-All tests passing ✅
+### Tested Areas
+
+* Feedback submission
+* Empty feedback validation
+* Feedback count
+* Smart contract interaction
+
+All documented tests are passing.
 
 ![Tests](./test-output.png)
 
 ---
 
-## ⚙️ CI/CD Pipeline
+## ⚙️ CI/CD
 
-* GitHub Actions integrated
-* Auto build + test
-* Auto deploy via Vercel
+GitHub Actions is integrated into the project for automated build and test workflows.
 
-### CI Badge
+### Pipeline
 
-![CI](https://github.com/RAHULRaa123/stellar-feedback-dapp/actions/workflows/main.yml/badge.svg)
+```text
+Code Push
+   ↓
+GitHub Actions
+   ↓
+Build
+   ↓
+Tests
+   ↓
+Deployment Workflow
+```
 
-GitHub Actions:
-https://github.com/RAHULRaa123/stellar-feedback-dapp/actions
+[View GitHub Actions](https://github.com/RAHULRaa123/stellar-trust-network/actions)
 
 ---
 
-## 🚀 Future Scope
+## 🚀 Roadmap
 
-* Real-time feedback updates
-* Analytics dashboard
-* Advanced rewards system
-* UI/UX improvements
+### Phase 1 — Stellar Business Trust
+
+* Mainnet deployment
+* Business verification on Stellar
+* Merchant onboarding
+
+### Phase 2 — Decentralized Reputation
+
+* NFT-based Trust Badges
+* Decentralized reputation protocol
+* Multi-business management dashboard
+
+### Phase 3 — Advanced Infrastructure
+
+* AI-powered fraud detection
+* Cross-border merchant payments
+* Public API for business verification
+* Mobile application for Android and iOS
+
+### Long-Term Vision
+
+Build a decentralized trust layer for businesses on Stellar where merchants, customers, and payment providers can interact through **verifiable reputation, transparent transactions, and blockchain-based trust infrastructure**.
+
+---
+
+## 📚 Project Documentation
+
+Additional project documentation is available in the repository:
+
+* [Product Update](./PRODUCT_UPDATE.md)
+* [User Feedback Report](./USER_FEEDBACK_REPORT.md)
+* [Growth & Traction Report](./GROWTH_REPORT.md)
 
 ---
 
 ## 👨‍💻 Author
 
-Rahul Saini
+**Rahul Saini**
+
+---
+
+## ⭐ Project
+
+**Stellar Trust Network**
+
+A decentralized trust infrastructure for businesses built on the Stellar Network.
